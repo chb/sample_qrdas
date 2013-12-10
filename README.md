@@ -1,5 +1,5 @@
 # Share Your QRDA with the SMART Community
-* By copy/paste: http://bit.ly/contribute-qrda  *or*
+* By copy/paste: http://bit.ly/contribute_qrda  *or*
 * By forking this repository and sumitting a pull request
 
 # Sample QRDA Documents
