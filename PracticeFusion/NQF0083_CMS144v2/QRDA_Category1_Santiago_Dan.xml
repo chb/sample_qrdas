@@ -1,0 +1,371 @@
+<?xml-stylesheet type="text/xsl" href="cda.xsl"?>
+<ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3" xmlns:voc="urn:hl7-org:v3/voc" xmlns:sdtc="urn:hl7-org:sdtc">
+  <realmCode code="US" />
+  <typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3" />
+  <templateId root="2.16.840.1.113883.10.20.22.1.1" />
+  <templateId root="2.16.840.1.113883.10.20.24.1.1" />
+  <templateId root="2.16.840.1.113883.10.20.24.1.2" />
+  <id root="CCD21D0D-10BD-447E-BF97-A8C66AA95CA6" />
+  <code code="55182-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Quality Measure Report" />
+  <title>QRDA Incidence Report</title>
+  <effectiveTime value="20140623154046" />
+  <confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25" />
+  <languageCode code="eng" />
+  <recordTarget>
+    <patientRole>
+      <id extension="C916FEF5-752E-4648-8040-89CF1E40E063" root="2.16.840.1.113883.3.3388.3.3" />
+      <addr use="HP">
+        <streetAddressLine>202 Burlington Rd</streetAddressLine>
+        <city>Bedford</city>
+        <state>MA</state>
+        <postalCode>01730</postalCode>
+        <country>US</country>
+      </addr>
+      <telecom use="HP" value="tel:1-781-271-3000" />
+      <patient>
+        <name>
+          <given>Dan</given>
+          <family>Santiago</family>
+        </name>
+        <administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1" codeSystemName="HL7 AdministrativeGender" />
+        <birthTime value="19420201" />
+        <raceCode code="1002-5" displayName="American Indian or Alaska Native" codeSystem="2.16.840.1.113883.6.238" codeSystemName="CDC Race and Ethnicity" />
+        <ethnicGroupCode code="2186-5" displayName="Not Hispanic or Latino" codeSystem="2.16.840.1.113883.6.238" codeSystemName="CDC Race and Ethnicity" />
+        <languageCommunication>
+          <templateId root="2.16.840.1.113883.3.88.11.83.2" assigningAuthorityName="HITSP/C83" />
+          <templateId root="1.3.6.1.4.1.19376.1.5.3.1.2.1" assigningAuthorityName="IHE/PCC" />
+          <languageCode code="eng" />
+        </languageCommunication>
+      </patient>
+    </patientRole>
+  </recordTarget>
+  <author>
+    <time value="20140623154046" />
+    <assignedAuthor>
+      <id root="2.16.840.1.113883.4.6" extension="YOUR NPI HERE" />
+      <addr use="HP">
+        <streetAddressLine>650 Townsend St</streetAddressLine>
+        <city>San Francisco</city>
+        <state>CA</state>
+        <postalCode>94103</postalCode>
+        <country>US</country>
+      </addr>
+      <telecom use="WP" value="tel:555-555-1212" />
+      <assignedAuthoringDevice>
+        <manufacturerModelName>Practice Fusion</manufacturerModelName>
+        <softwareName>Practice Fusion</softwareName>
+      </assignedAuthoringDevice>
+    </assignedAuthor>
+  </author>
+  <custodian>
+    <assignedCustodian>
+      <representedCustodianOrganization>
+        <id root="2.16.840.1.113883.4.6" />
+        <name>Practice Fusion</name>
+        <telecom use="WP" value="555-555-1212" />
+        <addr>
+          <streetAddressLine>650 Townsend St</streetAddressLine>
+          <city>San Francisco</city>
+          <state>CA</state>
+          <postalCode>94103</postalCode>
+          <country>US</country>
+        </addr>
+      </representedCustodianOrganization>
+    </assignedCustodian>
+  </custodian>
+  <legalAuthenticator>
+    <time value="20140623154046" />
+    <signatureCode code="S" />
+    <assignedEntity>
+      <id root="D7B25DCA-3F81-4F84-8CE7-7447744DF3A9" />
+      <addr use="HP">
+        <streetAddressLine>650 Townsend St</streetAddressLine>
+        <city>San Francisco</city>
+        <state>CA</state>
+        <postalCode>94103</postalCode>
+        <country>US</country>
+      </addr>
+      <telecom use="WP" value="tel:555-555-1212" />
+      <assignedPerson>
+        <name>
+          <given>Melisa</given>
+          <family>Han</family>
+        </name>
+      </assignedPerson>
+      <representedOrganization>
+        <id root="2.16.840.1.113883.3.3388" />
+        <name>Practice Fusion</name>
+      </representedOrganization>
+    </assignedEntity>
+  </legalAuthenticator>
+  <component>
+    <structuredBody>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.24.2.2" />
+          <templateId root="2.16.840.1.113883.10.20.24.2.3" />
+          <code code="55186-1" codeSystem="2.16.840.1.113883.6.1" />
+          <title>Measure Section</title>
+          <text>Measures</text>
+          <entry>
+            <organizer classCode="CLUSTER" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.24.3.98" />
+              <templateId root="2.16.840.1.113883.10.20.24.3.97" />
+              <statusCode code="completed" />
+              <reference typeCode="REFR">
+                <externalDocument classCode="DOC" moodCode="EVN">
+                  <id root="40280381-3D61-56A7-013E-666032B244F7" />
+                  <text>Heart Failure (HF): Beta-Blocker Therapy for Left Ventricular Systolic Dysfunction (LVSD) </text>
+                  <setId root="8439F671-2932-4D4C-88CA-EA5FAEACC89A" />
+                  <versionNumber value="2" />
+                </externalDocument>
+              </reference>
+            </organizer>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.17.2.1" />
+          <code code="55187-9" codeSystem="2.16.840.1.113883.6.1" />
+          <title>Reporting Parameters</title>
+          <text>
+            <list>
+              <item>Reporting Period: January 1st, 2012 - December 31st 2012</item>
+            </list>
+          </text>
+          <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.17.3.8" />
+              <code code="252116004" codeSystem="2.16.840.1.113883.6.96" displayName="Observation Parameters" />
+              <effectiveTime>
+                <low value="20120101000000" />
+                <high value="20121231000000" />
+              </effectiveTime>
+            </act>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.17.2.4" />
+          <templateId root="2.16.840.1.113883.10.20.24.2.1" />
+          <code code="55188-7" codeSystem="2.16.840.1.113883.6.1" />
+          <title>Patient Data</title>
+          <text></text>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <!--Diagnosis, Active: Heart Failure-->
+              <templateId root="2.16.840.1.113883.10.20.22.4.4" />
+              <templateId root="2.16.840.1.113883.10.20.24.3.11" />
+              <id root="1.2.3.4500049" extension="353493902" />
+              <code code="282291009" displayName="diagnosis" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT" />
+              <text>Heart Failure</text>
+              <statusCode code="completed" />
+              <effectiveTime>
+                <low value="20120301120000" />
+                <high nullFlavor="UNK" />
+              </effectiveTime>
+              <value xmlns:sdtc="urn:hl7-org:sdtc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CD" sdtc:valueSet="2.16.840.1.113883.3.526.3.376" code="428.9" codeSystem="2.16.840.1.113883.6.103">
+                <originalText>Heart Failure</originalText>
+              </value>
+              <entryRelationship typeCode="REFR">
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.6" />
+                  <templateId root="2.16.840.1.113883.10.20.24.3.94" />
+                  <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="status" />
+                  <statusCode code="completed" />
+                  <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                </observation>
+              </entryRelationship>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <!--Diagnosis, Active: Heart Failure-->
+              <templateId root="2.16.840.1.113883.10.20.22.4.4" />
+              <templateId root="2.16.840.1.113883.10.20.24.3.11" />
+              <id root="1.2.3.4500050" extension="353493945" />
+              <code code="282291009" displayName="diagnosis" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT" />
+              <text>Heart Failure</text>
+              <statusCode code="completed" />
+              <effectiveTime>
+                <low value="20120301120000" />
+                <high nullFlavor="UNK" />
+              </effectiveTime>
+              <value xmlns:sdtc="urn:hl7-org:sdtc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CD" sdtc:valueSet="2.16.840.1.113883.3.526.3.376" code="10091002" codeSystem="2.16.840.1.113883.6.96">
+                <originalText>Heart Failure</originalText>
+              </value>
+              <entryRelationship typeCode="REFR">
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.6" />
+                  <templateId root="2.16.840.1.113883.10.20.24.3.94" />
+                  <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="status" />
+                  <statusCode code="completed" />
+                  <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                </observation>
+              </entryRelationship>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <!--Diagnosis, Active: Moderate or Severe LVSD-->
+              <templateId root="2.16.840.1.113883.10.20.22.4.4" />
+              <templateId root="2.16.840.1.113883.10.20.24.3.11" />
+              <id root="1.2.3.4500050" extension="353494100" />
+              <code code="282291009" displayName="diagnosis" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT" />
+              <text>Moderate or Severe LVSD</text>
+              <statusCode code="completed" />
+              <effectiveTime>
+                <low value="20120301080000" />
+                <high value="99991231080000" />
+              </effectiveTime>
+              <value xmlns:sdtc="urn:hl7-org:sdtc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CD" sdtc:valueSet="2.16.840.1.113883.3.526.3.1090" code="981000124106" codeSystem="2.16.840.1.113883.6.96">
+                <originalText>Moderate or Severe LVSD</originalText>
+              </value>
+              <entryRelationship typeCode="REFR">
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.6" />
+                  <templateId root="2.16.840.1.113883.10.20.24.3.94" />
+                  <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="status" />
+                  <statusCode code="completed" />
+                  <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CD" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                </observation>
+              </entryRelationship>
+            </observation>
+          </entry>
+          <entry>
+            <substanceAdministration classCode="SBADM" moodCode="EVN">
+              <!--Medication, Active: Beta Blocker Therapy-->
+              <templateId root="2.16.840.1.113883.10.20.22.4.16" />
+              <templateId root="2.16.840.1.113883.10.20.24.3.41" />
+              <id root="1.2.3.4200052" extension="353493910" />
+              <text>Beta Blocker Therapy</text>
+              <statusCode code="active" />
+              <effectiveTime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="IVL_TS">
+                <low value="20120301080000" />
+                <high value="99901231000000" />
+              </effectiveTime>
+              <consumable>
+                <manufacturedProduct classCode="MANU">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23" />
+                  <manufacturedMaterial>
+                    <code xmlns:sdtc="urn:hl7-org:sdtc" code="200031" codeSystem="2.16.840.1.113883.6.88" sdtc:valueSet="2.16.840.1.113883.3.526.3.1174">
+                      <originalText>Beta Blocker Therapy"</originalText>
+                    </code>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+          <entry>
+            <substanceAdministration classCode="SBADM" moodCode="EVN">
+              <!--Medication, Active: Beta Blocker Therapy for LVSD-->
+              <templateId root="2.16.840.1.113883.10.20.22.4.16" />
+              <templateId root="2.16.840.1.113883.10.20.24.3.41" />
+              <id root="1.2.3.4200052" extension="353493910" />
+              <text>Beta Blocker Therapy for LVSD</text>
+              <statusCode code="active" />
+              <effectiveTime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="IVL_TS">
+                <low value="20120301080000" />
+                <high value="99901231000000" />
+              </effectiveTime>
+              <consumable>
+                <manufacturedProduct classCode="MANU">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23" />
+                  <manufacturedMaterial>
+                    <code xmlns:sdtc="urn:hl7-org:sdtc" code="200031" codeSystem="2.16.840.1.113883.6.88" sdtc:valueSet="2.16.840.1.113883.3.526.3.1184">
+                      <originalText>Beta Blocker Therapy for LVSD"</originalText>
+                    </code>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+          <entry>
+            <substanceAdministration classCode="SBADM" moodCode="RQO">
+              <!--Medication, Order: Beta Blocker Therapy-->
+              <templateId root="2.16.840.1.113883.10.20.22.4.42" />
+              <templateId root="2.16.840.1.113883.10.20.24.3.47" />
+              <id root="1.2.3.4400061" extension="353493904" />
+              <text>Beta Blocker Therapy</text>
+              <statusCode code="new" />
+              <effectiveTime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="IVL_TS">
+                <low value="20120301000000" />
+                <high value="20120301000000" />
+              </effectiveTime>
+              <consumable>
+                <manufacturedProduct classCode="MANU">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23" />
+                  <manufacturedMaterial>
+                    <code xmlns:sdtc="urn:hl7-org:sdtc" code="200031" codeSystem="2.16.840.1.113883.6.88" sdtc:valueSet="2.16.840.1.113883.3.526.3.1174">
+                      <originalText>Beta Blocker Therapy"</originalText>
+                    </code>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+          <entry>
+            <substanceAdministration classCode="SBADM" moodCode="RQO">
+              <!--Medication, Order: Beta Blocker Therapy for LVSD-->
+              <templateId root="2.16.840.1.113883.10.20.22.4.42" />
+              <templateId root="2.16.840.1.113883.10.20.24.3.47" />
+              <id root="1.2.3.4400061" extension="353493904" />
+              <text>Beta Blocker Therapy for LVSD</text>
+              <statusCode code="new" />
+              <effectiveTime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="IVL_TS">
+                <low value="20120301000000" />
+                <high value="20120301000000" />
+              </effectiveTime>
+              <consumable>
+                <manufacturedProduct classCode="MANU">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23" />
+                  <manufacturedMaterial>
+                    <code xmlns:sdtc="urn:hl7-org:sdtc" code="200031" codeSystem="2.16.840.1.113883.6.88" sdtc:valueSet="2.16.840.1.113883.3.526.3.1184">
+                      <originalText>Beta Blocker Therapy for LVSD"</originalText>
+                    </code>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+          <entry>
+            <encounter classCode="ENC" moodCode="EVN">
+              <!--Encounter, Performed: Office Visit-->
+              <templateId root="2.16.840.1.113883.10.20.22.4.49" />
+              <templateId root="2.16.840.1.113883.10.20.24.3.23" />
+              <id root="1.2.3.446" extension="353493886" />
+              <code xmlns:sdtc="urn:hl7-org:sdtc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CD" sdtc:valueSet="2.16.840.1.113883.3.464.1003.101.12.1001" code="99201" codeSystem="2.16.840.1.113883.6.12">
+                <originalText>Office Visit</originalText>
+              </code>
+              <text>Office Visit</text>
+              <statusCode code="completed" />
+              <effectiveTime>
+                <low value="20121220000000" />
+                <high value="20121220235959" />
+              </effectiveTime>
+            </encounter>
+          </entry>
+          <entry>
+            <encounter classCode="ENC" moodCode="EVN">
+              <!--Encounter, Performed: Office Visit-->
+              <templateId root="2.16.840.1.113883.10.20.22.4.49" />
+              <templateId root="2.16.840.1.113883.10.20.24.3.23" />
+              <id root="1.2.3.446" extension="353494034" />
+              <code xmlns:sdtc="urn:hl7-org:sdtc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CD" sdtc:valueSet="2.16.840.1.113883.3.464.1003.101.12.1001" code="99201" codeSystem="2.16.840.1.113883.6.12">
+                <originalText>Office Visit</originalText>
+              </code>
+              <text>Office Visit</text>
+              <statusCode code="completed" />
+              <effectiveTime>
+                <low value="20120301000000" />
+                <high value="20120301235959" />
+              </effectiveTime>
+            </encounter>
+          </entry>
+        </section>
+      </component>
+    </structuredBody>
+  </component>
+</ClinicalDocument>
