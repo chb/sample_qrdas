@@ -1,0 +1,1016 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This is a sample QRDA III document for CMS32v4.  This is a sample that illustrates a Continuous Variable Measure with an Initial Patient Population, Measure Population
+
+ and 4 Stratum.  Each population includes the Supplemental information for Sex, Ethnicity, Race and Payer -->
+<ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3" xmlns:cda="urn:hl7-org:v3" xsi:schemaLocation="urn:hl7-org:v3 C:\Users\dczulada\Desktop\Cypress\qrda_cat_1_cat_3\CDAR2IG_QRDAIII_DSTUR2_Errata_2014JUL\Schema\CDA\infrastructure\cda\CDA_SDTC.xsd">
+	<!--
+
+    ********************************************************
+
+    CDA Header (3.1.1	QRDA Category III Header Constraints)
+
+    ********************************************************
+
+  -->
+	<!-- 1.	SHALL contain exactly one [1..1] realmCode (CONF:17226).
+
+		a.	This realmCode SHALL contain exactly one [1..1] @code="US" (CONF:17227).-->
+	<realmCode code="US"/>
+	<!--  2.	SHALL contain exactly one [1..1] typeId (CONF:18186).
+
+		a.	This typeId SHALL contain exactly one [1..1] @root="2.16.840.1.113883.1.3" (CONF:18187).
+
+		b.	This typeId SHALL contain exactly one [1..1] @extension="POCD_HD000040" (CONF:18188).-->
+	<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+	<!-- 3.	SHALL contain exactly one [1..1] templateId (CONF:17208) such that it
+
+		a.	SHALL contain exactly one [1..1] @root="2.16.840.1.113883.10.20.27.1.1" (CONF:17209).-->
+	<templateId root="2.16.840.1.113883.10.20.27.1.1"/>
+	<!-- 4.	SHALL contain exactly one [1..1] id (CONF:17236).
+
+a.	This id SHALL be a globally unique identifier for the document (CONF:17242).-->
+	<id root="58c4ea30-1b42-0132-3b44-705681bb4fc7"/>
+	<!-- 5.	SHALL contain exactly one [1..1] code (CodeSystem: LOINC 2.16.840.1.113883.6.1 STATIC) (CONF:17210).
+
+		a.	This code SHALL contain exactly one [1..1] @code="55184-6" " Quality Reporting Document Architecture Calculated Summary Report (CodeSystem: LOINC 2.16.840.1.113883.6.1) (CONF:19549).-->
+	<code code="55184-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Quality Reporting Document Architecture Calculated Summary Report"/>
+	<!-- 6.	SHALL contain exactly one [1..1] title (CONF:17211). -->
+	<title>QRDA Calculated Summary Report</title>
+	<!-- 7.	SHALL contain exactly one [1..1] effectiveTime (CONF:17237).
+
+		a.	The content SHALL be a conformant US Realm Date and Time (DTM.US.FIELDED) (2.16.840.1.113883.10.20.22.5.4) (CONF:18189).-->
+	<effectiveTime value="20140910180103"/>
+	<!-- 8.	SHALL contain exactly one [1..1] confidentialityCode, which SHOULD be selected from ValueSet HL7 BasicConfidentialityKind 2.16.840.1.113883.1.11.16926 STATIC 2010-04-21 (CONF:17238).-->
+	<confidentialityCode codeSystem="2.16.840.1.113883.5.25" code="N"/>
+	<!-- 9.	SHALL contain exactly one [1..1] languageCode (CONF:17239).
+
+		a.	This languageCode SHALL contain exactly one [1..1] @code, which SHALL be selected from ValueSet Language 2.16.840.1.113883.1.11.11526 DYNAMIC (CONF:19669).-->
+	<languageCode code="en-US"/>
+	<!-- 10.	SHOULD contain zero or one [0..1] versionNumber (CONF:18260). -->
+	<versionNumber value="1"/>
+	<!-- 11.	SHALL contain exactly one [1..1] recordTarget (CONF:17212). -->
+	<recordTarget>
+		<!-- a.	This recordTarget SHALL contain exactly one [1..1] patientRole (CONF:17232) such that it -->
+		<patientRole>
+			<!-- i.	SHALL contain exactly one [1..1] id (CONF:17233).
+
+			1.	This id SHALL contain exactly one [1..1] @nullFlavor="NA" (CONF:17234).-->
+			<id nullFlavor="NA"/>
+		</patientRole>
+	</recordTarget>
+	<!-- 12.	SHALL contain at least one [1..*] author (CONF:18156) such that it -->
+	<author>
+		<!-- a.	SHALL contain exactly one [1..1] time (CONF:18158).-->
+		<time value="20140910180100"/>
+		<!-- b.	SHALL contain exactly one [1..1] assignedAuthor (CONF:18157-->
+		<assignedAuthor>
+			<!-- Registry author ID -->
+			<id nullFlavor="UNK" root="2.16.840.1.113883.4.6" assigningAuthorityName="NPI"/>
+			<!-- c.	There SHALL be exactly one assignedAuthor/assignedPerson or exactly one assignedAuthor/assignedAuthoringDevice (CONF:19667).-->
+			<assignedAuthoringDevice>
+				<!-- 1.	The assignedAuthoringDevice, if present, SHALL contain exactly one [1..1] softwareName (CONF:18262).-->
+				<softwareName>device_name</softwareName>
+			</assignedAuthoringDevice>
+			<!-- iii.	SHALL contain exactly one [1..1] representedOrganization (CONF:18163).-->
+			<representedOrganization>
+				<!-- 1.	This representedOrganization SHALL contain at least one [1..*] name (CONF:18265).-->
+				<name>Good Health Hospital</name>
+			</representedOrganization>
+		</assignedAuthor>
+	</author>
+	<!-- 13.	SHALL contain exactly one [1..1] custodian (CONF:17213). -->
+	<custodian>
+		<!-- a.	This custodian SHALL contain exactly one [1..1] assignedCustodian (CONF:17214).-->
+		<assignedCustodian>
+			<!-- i.	This assignedCustodian SHALL contain exactly one [1..1] representedCustodianOrganization (CONF:17215).-->
+			<representedCustodianOrganization>
+				<!-- 1.	This representedCustodianOrganization SHALL contain at least one [1..*] id (CONF:18165).-->
+				<id root="2.16.840.1.113883.19.5"/>
+				<!-- 2.	This representedCustodianOrganization SHOULD contain zero or one [0..1] name (CONF:18166).-->
+				<name>Good Health Hospital</name>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<!-- 14.	SHALL contain exactly one [1..1] legalAuthenticator (CONF:17225). -->
+	<legalAuthenticator>
+		<!-- a.	This legalAuthenticator SHALL contain exactly one [1..1] time (CONF:18167). -->
+		<time value="20140910180100"/>
+		<!-- b.	This legalAuthenticator SHALL contain exactly one [1..1] signatureCode (CONF:18168). 
+
+			i.	This signatureCode SHALL contain exactly one [1..1] @code="S" (CONF:18169).-->
+		<signatureCode code="S"/>
+		<!-- c.	This legalAuthenticator SHALL contain exactly one [1..1] assignedEntity (CONF:19670).-->
+		<assignedEntity>
+			<!-- SHALL ID -->
+			<id root="2.16.840.1.113883.19.5"/>
+			<!-- i.	This assignedEntity MAY contain zero or one [0..1] representedOrganization (CONF:19671).-->
+			<representedOrganization>
+				<!-- 1.	The representedOrganization, if present, SHALL contain at least one [1..*] id (CONF:19672). -->
+				<id root="2.16.840.1.113883.19.5"/>
+				<!-- 2.	The representedOrganization, if present, SHOULD contain zero or one [0..1] name (CONF:19673).-->
+				<name/>
+			</representedOrganization>
+		</assignedEntity>
+	</legalAuthenticator>
+	<!--
+
+********************************************************
+
+CDA Body
+
+********************************************************
+
+-->
+	<component>
+		<structuredBody>
+			<!--
+
+********************************************************
+
+(4.2.1 - QRDA Category III Reporting Parameters Section)
+
+********************************************************
+
+-->
+			<component>
+				<section>
+					<!--1.	Conforms to Reporting Parameters Section template (2.16.840.1.113883.10.20.17.2.1) -->
+					<templateId root="2.16.840.1.113883.10.20.17.2.1"/>
+					<!-- 2.	SHALL contain exactly one [1..1] templateId (CONF:18323) such that it
+
+						a.	SHALL contain exactly one [1..1] @root="2.16.840.1.113883.10.20.27.2.2" (CONF:18324 -->
+					<templateId root="2.16.840.1.113883.10.20.27.2.2"/>
+					<code code="55187-9" codeSystem="2.16.840.1.113883.6.1"/>
+					<title>Reporting Parameters</title>
+					<text>
+						<list>
+							<item>Reporting period: January 1st, 2013 - December 31th, 2013</item>
+						</list>
+					</text>
+					<!-- 3.	SHOULD contain zero or one [0..1] entry (CONF:18325) such that it
+
+						a.	SHALL contain exactly one [1..1] @typeCode="DRIV" Is derived from (CodeSystem: HL7ActRelationshipType 2.16.840.1.113883.5.1002 STATIC) (CONF:18427).-->
+					<entry typeCode="DRIV">
+						<!-- b.	SHALL contain exactly one [1..1] Reporting Parameters Act (templateId:2.16.840.1.113883.10.20.17.3.8) (CONF:18428).-->
+						<!-- 5.10	Reporting Parameters Act -->
+						<!-- 1.	SHALL contain exactly one [1..1] @classCode="ACT" (CodeSystem: HL7ActClass 2.16.840.1.113883.5.6 STATIC) (CONF:3269).-->
+						<!-- 2.	SHALL contain exactly one [1..1] @moodCode="EVN" Event (CodeSystem: ActMood 2.16.840.1.113883.5.1001 STATIC) (CONF:3270).-->
+						<act classCode="ACT" moodCode="EVN">
+							<!-- 3.	SHALL contain exactly one [1..1] templateId (CONF:18098) such that it 
+
+									a.	SHALL contain exactly one [1..1] @root="2.16.840.1.113883.10.20.17.3.8" (CONF:18099).-->
+							<templateId root="2.16.840.1.113883.10.20.17.3.8"/>
+							<id root="55a43e20-6463-46eb-81c3-9a3a1ad41225"/>
+							<!-- 4.	SHALL contain exactly one [1..1] code="252116004" Observation Parameters (CodeSystem: SNOMED-CT 2.16.840.1.113883.6.96 STATIC) (CONF:3272).-->
+							<code code="252116004" codeSystem="2.16.840.1.113883.6.96" displayName="Observation Parameters"/>
+							<!-- 5.	SHALL contain exactly one [1..1] effectiveTime (CONF:3273).-->
+							<effectiveTime>
+								<!-- a.	This effectiveTime SHALL contain exactly one [1..1] low (CONF:3274).-->
+								<low value="20130101"/>
+								<!-- b.	This effectiveTime SHALL contain exactly one [1..1] high (CONF:3275).-->
+								<high value="20131231"/>
+							</effectiveTime>
+						</act>
+					</entry>
+				</section>
+			</component>
+			<!--
+
+********************************************************
+
+(4.1.1	QRDA Category III Measure Section)
+
+********************************************************
+
+-->
+			<component>
+				<section>
+					<!-- 1.	Conforms to Measure Section template (2.16.840.1.113883.10.20.24.2.2). -->
+					<templateId root="2.16.840.1.113883.10.20.24.2.2"/>
+					<!-- 2.	SHALL contain exactly one [1..1] templateId (CONF:17284) such that it -->
+					<!-- a.	SHALL contain exactly one [1..1] @root="2.16.840.1.113883.10.20.27.2.1" (CONF:17285). -->
+					<templateId root="2.16.840.1.113883.10.20.27.2.1"/>
+					<!-- 4.1	Measure Section - 2.	SHALL contain exactly one [1..1] code (CONF:12798).-->
+					<code code="55186-1" codeSystem="2.16.840.1.113883.6.1"/>
+					<!-- 4.1	Measure Section - 3.	SHALL contain exactly one [1..1] title="Measure Section" (CONF:12799).-->
+					<title>Measure Section</title>
+					<!-- 4.1	Measure Section - 4.	SHALL contain exactly one [1..1] text (CONF:12800).-->
+					<text>
+
+					</text>
+					<!-- 3.	SHALL contain at least one [1..*] entry (CONF:17906) such that it -->
+					<entry>
+						<!-- a.	SHALL contain exactly one [1..1] Measure Reference and Results (templateId:2.16.840.1.113883.10.20.27.3.1) (CONF:17907).-->
+						<!-- 5.5.1	Measure Reference and Results -->
+						<!-- 2.	SHALL contain exactly one [1..1] @classCode="CLUSTER" (CodeSystem: HL7ActClass 2.16.840.1.113883.5.6 STATIC) (CONF:17887).-->
+						<!-- 3.	SHALL contain exactly one [1..1] @moodCode="EVN" (CodeSystem: ActMood 2.16.840.1.113883.5.1001 STATIC) (CONF:17888).-->
+						<organizer classCode="CLUSTER" moodCode="EVN">
+							<!-- 1.	Conforms to Measure Reference template (2.16.840.1.113883.10.20.24.3.98). -->
+							<templateId root="2.16.840.1.113883.10.20.24.3.98"/>
+							<!-- 4.	SHALL contain exactly one [1..1] templateId (CONF:17908) such that it 
+
+									a.	SHALL contain exactly one [1..1] @root="2.16.840.1.113883.10.20.27.3.1" (CONF:17909).-->
+							<templateId root="2.16.840.1.113883.10.20.27.3.1"/>
+							<id extension="40280381-43DB-D64C-0144-6A8B0A3B30C6"/>
+							<!-- 5.	SHALL contain exactly one [1..1] statusCode (CONF:17889).
+
+								a.	This statusCode SHALL contain exactly one [1..1] @code="completed" Completed (CodeSystem: ActStatus 2.16.840.1.113883.5.14) (CONF:19552).-->
+							<statusCode code="completed"/>
+							<!-- 6.	SHALL contain exactly one [1..1] reference (CONF:17890) such that it-->
+							<!-- a.	SHALL contain exactly one [1..1] @typeCode="REFR" (CONF:17891).-->
+							<reference typeCode="REFR">
+								<!-- i.	This externalDocument SHALL contain exactly one [1..1] @classCode (CodeSystem: HL7ActClass 2.16.840.1.113883.5.6) (CONF:19548).-->
+								<externalDocument classCode="DOC" moodCode="EVN">
+									<!-- ii.	This externalDocument SHALL contain exactly one [1..1] id (CONF:18192) such that it-->
+									<!-- 1.	SHALL contain exactly one [1..1] @root (CONF:18193).
+
+										2.	If this reference is to an eMeasure, this id/@root SHALL equal the version specific identifier for eMeasure (i.e. QualityMeasureDocument/id) (CONF:19660).-->
+									<id root="40280381-43DB-D64C-0144-6A8B0A3B30C6"/>
+									<!-- iv.	This externalDocument SHOULD contain zero or one [0..1] text (CONF:17897). -->
+									<text>Median Time from ED Arrival to ED Departure for Discharged ED Patients</text>
+									<!-- v.	This externalDocument MAY contain zero or one [0..1] setId (CONF:17899).  
+
+										1.	If this reference is to an eMeasure, this setId SHALL equal the QualityMeasureDocument/setId which is the eMeasure version neutral id (CONF:17900).-->
+									<setId root="3FD13096-2C8F-40B5-9297-B714E8DE9133"/>
+									<!-- vi.	This externalDocument MAY contain zero or one [0..1] versionNumber (CONF:17901). -->
+									<!-- 1.	If this reference is to an eMeasure this version number SHALL equal the sequential eMeasure Version number (CONF:17902).-->
+									<versionNumber value="4"/>
+								</externalDocument>
+							</reference>
+							<!-- 9.	MAY contain zero or one [0..1] component (CONF:18423) such that it-->
+							<component>
+								<!-- a.	SHALL contain exactly one [1..1] Performance Rate for Proportion Measure (templateId:2.16.840.1.113883.10.20.27.3.14) (CONF:17904).-->
+								<!-- 5.7	Performance Rate for Proportion Measure -->
+								<!-- 1.	SHALL contain exactly one [1..1] @classCode="OBS" Observation (CodeSystem: HL7ActClass 2.16.840.1.113883.5.6 STATIC) (CONF:18395).-->
+								<!-- 2.	SHALL contain exactly one [1..1] @moodCode="EVN" Event (CodeSystem: ActMood 2.16.840.1.113883.5.1001 STATIC) (CONF:18396).-->
+								<observation classCode="OBS" moodCode="EVN">
+									<!-- 3.	SHALL contain exactly one [1..1] templateId (CONF:19649).
+
+									a.	This templateId SHALL contain exactly one [1..1] @root="2.16.840.1.113883.10.20.27.3.14" (CONF:19650).-->
+									<templateId root="2.16.840.1.113883.10.20.27.3.14"/>
+									<!-- 1.	SHALL contain exactly one [1..1] code (CONF:18397).
+
+									a.	This code SHALL contain exactly one [1..1] @code="72510-1" Performance 
+
+									b.	Rate (CodeSystem: LOINC 2.16.840.1.113883.6.1 STATIC) (CONF:18398).-->
+									<code code="72510-1" codeSystem="2.16.840.1.113883.6.1" displayName="Performance Rate" codeSystemName="2.16.840.1.113883.6.1"/>
+									<!-- 5.	SHALL contain exactly one [1..1] statusCode (CONF:18421).
+
+									a.	This statusCode SHALL contain exactly one [1..1] @code="completed" completed (CodeSystem: ActStatus 2.16.840.1.113883.5.14 STATIC) (CONF:18422).-->
+									<statusCode code="completed"/>
+									<!-- 6.	SHALL contain exactly one [1..1] value with @xsi:type="REAL" (CONF:18399).-->
+									<value xsi:type="REAL" value="0.5"/>
+									<!-- 7.	MAY contain zero or one [0..1] reference (CONF:19651).-->
+									<!-- a.	The reference, if present, SHALL contain exactly one [1..1] @typeCode="REFR" refers to (CodeSystem: HL7ActRelationshipType 2.16.840.1.113883.5.1002) (CONF:19652).-->
+									<reference typeCode="REFR">
+										<!-- b.	The reference, if present, SHALL contain exactly one [1..1] externalObservation (CONF:19653).
+
+											i.	This externalObservation SHALL contain exactly one [1..1] @classCode="OBS" Observation (CodeSystem: HL7ActClass 2.16.840.1.113883.5.6) (CONF:19654).-->
+										<externalObservation classCode="OBS" moodCode="EVN">
+											<!-- The externalObservationID contains the ID of the numerator in the referenced eMeasure.-->
+											<!-- ii.	This externalObservation SHALL contain exactly one [1..1] id (CONF:19655).-->
+											<!-- 1.	This id SHALL contain exactly one [1..1] @root (CONF:19656).-->
+											<id root="E684D686-6503-4EBC-846B-DF4AFBD3BB4C"/>
+											<!-- iii.	This externalObservation SHALL contain exactly one [1..1] code (CONF:19657).-->
+											<!-- 1.	This code SHALL contain exactly one [1..1] @code="NUMER" Numerator (CodeSystem: ObservationValue 2.16.840.1.113883.5.1063) (CONF:19658).-->
+											<code code="NUMER" displayName="Numerator" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="ObservationValue"/>
+										</externalObservation>
+									</reference>
+								</observation>
+							</component>
+							<!--
+
+********************************************************
+
+(Measure Calculation Results)
+
+********************************************************
+
+-->
+							<!-- 10.	SHALL contain at least one [1..*] component (CONF:18425) such that it 
+
+								a.	SHALL contain exactly one [1..1] Measure Data (templateId:2.16.840.1.113883.10.20.27.3.5) (CONF:18426).-->
+							<!-- 5.4	Measure Data  -->
+							<!-- There will be one component for the IPP, MSRPOPL for four Stratum -->
+							<!--   IPP  4C2E6F8A-C346-4743-8C87-63B1E0821EAF  -->
+							<!--   MSRPOPL  101C2A01-2B54-4AA3-A41D-4DAC6B6EF9AA  -->
+							<!--   OBSERV  D3BF8D52-9D5F-4724-B258-ADC20B2A2D8A  -->
+							<!--   Stratum 1  40280381-3D27-5493-013D-61074FD32A72  -->
+							<!--   Stratum 2  40280381-3D27-5493-013D-610750CB2A74  -->
+							<!--   Stratum 3  40280381-3D27-5493-013D-610751872A76  -->
+							<!--   Stratum 4  40280381-3D27-5493-013D-6107531C2A79  -->
+							<component>
+								<!--   MEASURE DATA REPORTING FOR    IPP  4C2E6F8A-C346-4743-8C87-63B1E0821EAF  -->
+								<!-- 1.	SHALL contain exactly one [1..1] @classCode="OBS" (CodeSystem: HL7ActClass 2.16.840.1.113883.5.6 STATIC) (CONF:17615).-->
+								<!-- 2.	SHALL contain exactly one [1..1] @moodCode="EVN" (CodeSystem: ActMood 2.16.840.1.113883.5.1001 STATIC) (CONF:17616).-->
+								<observation classCode="OBS" moodCode="EVN">
+									<!-- 3.	SHALL contain exactly one [1..1] templateId (CONF:17912).
+
+									a.	This templateId SHALL contain exactly one [1..1] @root="2.16.840.1.113883.10.20.27.3.5" (CONF:17913). -->
+									<templateId root="2.16.840.1.113883.10.20.27.3.5"/>
+									<!-- 4.	SHALL contain exactly one [1..1] code (CONF:17617).
+
+									a.	This code SHALL contain exactly one [1..1] @code="ASSERTION" Assertion (CodeSystem: ActCode 2.16.840.1.113883.5.4 STATIC) (CONF:18198).-->
+									<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" displayName="Assertion" codeSystemName="ActCode"/>
+									<!-- 5.	SHALL contain exactly one [1..1] statusCode (CodeSystem: ActStatus 2.16.840.1.113883.5.14 STATIC) (CONF:18199).
+
+									a.	This statusCode SHALL contain exactly one [1..1] @code="completed" Completed (CodeSystem: ActStatus 2.16.840.1.113883.5.14) (CONF:19555).-->
+									<statusCode code="completed"/>
+									<!-- 6.	SHALL contain exactly one [1..1] value with @xsi:type="CD", where the @code SHOULD be selected from ValueSet ObservationPopulationInclusion 2.16.840.1.113883.1.11.20369 DYNAMIC (CONF:17618).-->
+									<value xsi:type="CD" code="IPP" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="ObservationValue"/>
+									<!-- 7.	SHALL contain exactly one [1..1] entryRelationship (CONF:17619) such that it 
+
+										a.	SHALL contain exactly one [1..1] @typeCode="SUBJ" (CONF:17910).
+
+										b.	SHALL contain exactly one [1..1] @inversionInd="true" (CONF:17911).-->
+									<entryRelationship typeCode="SUBJ" inversionInd="true">
+										<!-- c.	SHALL contain exactly one [1..1] Aggregate Count-->
+										<!-- 5.1	Aggregate Count -->
+										<!-- 1.	SHALL contain exactly one [1..1] @classCode="OBS" (CodeSystem: HL7ActClass 2.16.840.1.113883.5.6 STATIC) (CONF:17563).-->
+										<!-- 2.	SHALL contain exactly one [1..1] @moodCode="EVN" (CodeSystem: ActMood 2.16.840.1.113883.5.1001 STATIC) (CONF:17564).-->
+										<observation classCode="OBS" moodCode="EVN">
+											<!-- 3.	SHALL contain exactly one [1..1] templateId (CONF:17565) such that it
+
+											a.	SHALL contain exactly one [1..1] @root="2.16.840.1.113883.10.20.27.3.3" (CONF:18095).-->
+											<templateId root="2.16.840.1.113883.10.20.27.3.3"/>
+											<!-- 4.	SHALL contain exactly one [1..1] code (CONF:17566).
+
+											a.	This code SHALL contain exactly one [1..1] @code="MSRAGG" rate aggregation (CodeSystem: ActCode 2.16.840.1.113883.5.4) (CONF:19508).-->
+											<code code="MSRAGG" displayName="rate aggregation" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+											<!-- 5.	SHALL contain exactly one [1..1] value with @xsi:type="INT" (CONF:17567).
+
+											a.	This value SHALL contain exactly one [1..1] @value (CONF:17568).-->
+											<value xsi:type="INT" value="10"/>
+											<!-- 6.	SHALL contain exactly one [1..1] methodCode (CONF:19509).
+
+											a.	This methodCode SHALL contain exactly one [1..1] @code="COUNT" Count (CodeSystem: ObservationMethod 2.16.840.1.113883.5.84) (CONF:19510).-->
+											<methodCode code="COUNT" displayName="Count" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod"/>
+										</observation>
+									</entryRelationship>
+									<!-- 
+
+****************************************
+
+Stratum Information
+
+****************************************
+
+-->
+									<!-- 8.	MAY contain zero or more [0..*] entryRelationship (CONF:17918) such that it
+
+									a.	SHALL contain exactly one [1..1] @typeCode="COMP" (CONF:17919).
+
+									b.	SHALL contain exactly one [1..1] Reporting Stratum (templateId:2.16.840.1.113883.10.20.27.3.4) (CONF:17920).-->
+									<!-- 5.12	Reporting Stratum -->
+									<entryRelationship typeCode="COMP">
+										<!-- 1.	SHALL contain exactly one [1..1] @classCode="OBS" (CodeSystem: HL7ActClass 2.16.840.1.113883.5.6 STATIC) (CONF:17575).
+
+										2.	SHALL contain exactly one [1..1] @moodCode="EVN" (CodeSystem: ActMood 2.16.840.1.113883.5.1001 STATIC) (CONF:17576).-->
+										<observation classCode="OBS" moodCode="EVN">
+											<!--3.	SHALL contain exactly one [1..1] templateId (CONF:18093) such that it
+
+										a.	SHALL contain exactly one [1..1] @root="2.16.840.1.113883.10.20.27.3.4" (CONF:18094).-->
+											<templateId root="2.16.840.1.113883.10.20.27.3.4"/>
+											<!-- 4.	SHALL contain exactly one [1..1] code (CONF:17577).
+
+											a.	This code SHALL contain exactly one [1..1] @code="ASSERTION" Assertion (CodeSystem: ActCode 2.16.840.1.113883.5.4 STATIC) (CONF:17578).-->
+											<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" displayName="Assertion" codeSystemName="ActCode"/>
+											<!-- 5.	SHALL contain exactly one [1..1] statusCode (CONF:17579).
+
+											a.	This statusCode SHALL contain exactly one [1..1] @code="completed" Completed (CodeSystem: ActStatus 2.16.840.1.113883.5.14 STATIC) (CONF:18201).-->
+											<statusCode code="completed"/>
+											<!-- 6.	SHOULD contain zero or one [0..1] value (CONF:17580).
+
+											a.	If this Reporting Stratum references an eMeasure, and the value of externalObservation/id equals the reference stratification id defined in the eMeasure, then this value SHALL be the same as the contents of the observation/code element in the eMeasure that is defined along with the observation/id element (CONF:18259).-->
+											<value xsi:type="CD" nullFlavor="OTH">
+												<originalText>RS1: With ED Encounter</originalText>
+											</value>
+											<!-- 7.	SHALL contain exactly one [1..1] entryRelationship (CONF:17581) such that it
+
+											a.	SHALL contain exactly one [1..1] @typeCode="SUBJ" (CONF:17582).
+
+											b.	SHALL contain exactly one [1..1] @inversionInd="true" (CONF:17583).
+
+											c.	SHALL contain exactly one [1..1] Aggregate Count (templateId:2.16.840.1.113883.10.20.27.3.3) (CONF:17584).-->
+											<entryRelationship typeCode="SUBJ" inversionInd="true">
+												<!-- 5.1	Aggregate Count (Discussed earlier around Line 270)-->
+												<observation classCode="OBS" moodCode="EVN">
+													<templateId root="2.16.840.1.113883.10.20.27.3.3"/>
+													<code code="MSRAGG" displayName="rate aggregation" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+													<value xsi:type="INT" value="10"/>
+													<methodCode code="COUNT" displayName="Count" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod"/>
+												</observation>
+											</entryRelationship>
+											<!-- 9.	SHALL contain exactly one [1..1] reference (CONF:18204).
+
+											a.	This reference SHALL contain exactly one [1..1] @typeCode="REFR" (CodeSystem: HL7ActRelationshipType 2.16.840.1.113883.5.1002 STATIC) (CONF:18205).-->
+											<reference typeCode="REFR">
+												<!-- b.	This reference SHALL contain exactly one [1..1] externalObservation (CONF:18206).-->
+												<externalObservation classCode="OBS" moodCode="EVN">
+													<!-- If this reference is to an eMeasure, this id equals the referenced stratification id defined in the eMeasure.
+
+													i.	This externalObservation SHALL contain exactly one [1..1] id (CONF:18207).-->
+													<id root="40280381-3D27-5493-013D-61074FD32A72"/>
+												</externalObservation>
+											</reference>
+										</observation>
+									</entryRelationship>
+									<!-- Reporting Stratum -->
+									<entryRelationship typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="2.16.840.1.113883.10.20.27.3.4"/>
+											<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" displayName="Assertion" codeSystemName="ActCode"/>
+											<statusCode code="completed"/>
+											<value xsi:type="CD" nullFlavor="OTH">
+												<originalText>RS2: With Mental Disorders</originalText>
+											</value>
+											<!-- Aggregate Count -->
+											<entryRelationship typeCode="SUBJ" inversionInd="true">
+												<observation classCode="OBS" moodCode="EVN">
+													<templateId root="2.16.840.1.113883.10.20.27.3.3"/>
+													<code code="MSRAGG" displayName="rate aggregation" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+													<value xsi:type="INT" value="0"/>
+													<methodCode code="COUNT" displayName="Count" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod"/>
+												</observation>
+											</entryRelationship>
+											<reference typeCode="REFR">
+												<externalObservation classCode="OBS" moodCode="EVN">
+													<id root="40280381-3D27-5493-013D-610750CB2A74"/>
+												</externalObservation>
+											</reference>
+										</observation>
+									</entryRelationship>
+									<!-- Reporting Stratum -->
+									<entryRelationship typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="2.16.840.1.113883.10.20.27.3.4"/>
+											<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" displayName="Assertion" codeSystemName="ActCode"/>
+											<statusCode code="completed"/>
+											<value xsi:type="CD" nullFlavor="OTH">
+												<originalText>RS3: With Acute care hospital transfer</originalText>
+											</value>
+											<!-- Aggregate Count -->
+											<entryRelationship typeCode="SUBJ" inversionInd="true">
+												<observation classCode="OBS" moodCode="EVN">
+													<templateId root="2.16.840.1.113883.10.20.27.3.3"/>
+													<code code="MSRAGG" displayName="rate aggregation" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+													<value xsi:type="INT" value="0"/>
+													<methodCode code="COUNT" displayName="Count" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod"/>
+												</observation>
+											</entryRelationship>
+											<reference typeCode="REFR">
+												<externalObservation classCode="OBS" moodCode="EVN">
+													<id root="40280381-3D27-5493-013D-610751872A76"/>
+												</externalObservation>
+											</reference>
+										</observation>
+									</entryRelationship>
+									<!-- Reporting Stratum -->
+									<entryRelationship typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="2.16.840.1.113883.10.20.27.3.4"/>
+											<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" displayName="Assertion" codeSystemName="ActCode"/>
+											<statusCode code="completed"/>
+											<value xsi:type="CD" nullFlavor="OTH">
+												<originalText>RS4: Without Mental Disorders and Acute care hospital transfer</originalText>
+											</value>
+											<!-- Aggregate Count -->
+											<entryRelationship typeCode="SUBJ" inversionInd="true">
+												<observation classCode="OBS" moodCode="EVN">
+													<templateId root="2.16.840.1.113883.10.20.27.3.3"/>
+													<code code="MSRAGG" displayName="rate aggregation" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+													<value xsi:type="INT" value="10"/>
+													<methodCode code="COUNT" displayName="Count" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod"/>
+												</observation>
+											</entryRelationship>
+											<reference typeCode="REFR">
+												<externalObservation classCode="OBS" moodCode="EVN">
+													<id root="40280381-3D27-5493-013D-6107531C2A79"/>
+												</externalObservation>
+											</reference>
+										</observation>
+									</entryRelationship>
+									<!-- 
+
+****************************************
+
+Supplemental Information
+
+****************************************
+
+-->
+									<!--    9.	MAY contain zero or more [0..*] entryRelationship (CONF:18136) such that it
+
+										a.	SHALL contain exactly one [1..1] @typeCode="COMP" (CodeSystem: HL7ActRelationshipType 2.16.840.1.113883.5.1002 STATIC) (CONF:18137).
+
+										b.	SHALL contain exactly one [1..1] Sex Supplemental Data Element (templateId:2.16.840.1.113883.10.20.27.3.6) (CONF:18138).-->
+									<!--                            Supplemental Date Template                                                  -->
+									<entryRelationship typeCode="COMP">
+										<!-- 1.	SHALL contain exactly one [1..1] @classCode="OBS" (CodeSystem: HL7ActClass 2.16.840.1.113883.5.6 STATIC) (CONF:18230).
+
+										2.	SHALL contain exactly one [1..1] @moodCode="EVN" (CodeSystem: ActMood 2.16.840.1.113883.5.1001 STATIC) (CONF:18231).-->
+										<observation classCode="OBS" moodCode="EVN">
+											<!-- 3.	SHALL contain exactly one [1..1] templateId (CONF:18232).
+
+											a.	This templateId SHALL contain exactly one [1..1] @root="2.16.840.1.113883.10.20.27.3.6" (CONF:18233).-->
+											<templateId root="2.16.840.1.113883.10.20.27.3.6"/>
+											<!-- 4.	SHALL contain exactly one [1..1] code (CONF:18234).
+
+											a.	This code SHALL contain exactly one [1..1] @code="184100006" Patient sex (CodeSystem: SNOMED-CT 2.16.840.1.113883.6.96 STATIC) (CONF:18235).-->
+											<code code="184100006" codeSystem="2.16.840.1.113883.6.96"/>
+											<!-- 5.	SHALL contain exactly one [1..1] statusCode (CONF:18124).
+
+											a.	This statusCode SHALL contain exactly one [1..1] @code="completed" Completed (CodeSystem: ActStatus 2.16.840.1.113883.5.14 STATIC) (CONF:18125).-->
+											<statusCode code="completed"/>
+											<!-- 6.	SHALL contain exactly one [1..1] value with @xsi:type="CD", where the @code SHALL be selected from ValueSet Administrative Gender (HL7 V3) 2.16.840.1.113883.1.11.1 DYNAMIC (CONF:18236).-->
+											<value xsi:type="CD" code="M" codeSystem="2.16.840.1.113883.5.1"/>
+											<!-- 7.	SHALL contain exactly one [1..1] entryRelationship (CONF:18126) such that it 
+
+											a.	SHALL contain exactly one [1..1] @typeCode="SUBJ" Has Subject (CodeSystem: HL7ActRelationshipType 2.16.840.1.113883.5.1002 STATIC) (CONF:18127).
+
+											b.	SHALL contain exactly one [1..1] @inversionInd="true" (CONF:18128).
+
+											c.	SHALL contain exactly one [1..1] Aggregate Count (templateId:2.16.840.1.113883.10.20.27.3.3) (CONF:18129).
+
+											-->
+											<entryRelationship typeCode="SUBJ" inversionInd="true">
+												<!-- 5.1	Aggregate Count (Discussed earlier around Line 270)-->
+												<observation classCode="OBS" moodCode="EVN">
+													<templateId root="2.16.840.1.113883.10.20.27.3.3"/>
+													<code code="MSRAGG" displayName="rate aggregation" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+													<value xsi:type="INT" value="6"/>
+													<methodCode code="COUNT" displayName="Count" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod"/>
+												</observation>
+											</entryRelationship>
+										</observation>
+									</entryRelationship>
+									<!--     ETHNICITY Supplemental Data Reporting  -->
+									<!--  Similar to the Sex Data Reporting, differences inline-->
+									<entryRelationship typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<!-- 3.	SHALL contain exactly one [1..1] templateId (CONF:18218).
+
+											a.	This templateId SHALL contain exactly one [1..1] @root="2.16.840.1.113883.10.20.27.3.7" (CONF:18219).-->
+											<templateId root="2.16.840.1.113883.10.20.27.3.7"/>
+											<!-- 4.	SHALL contain exactly one [1..1] code (CONF:18220).
+
+											a.	This code SHALL contain exactly one [1..1] @code="364699009" Ethnic Group (CodeSystem: SNOMED-CT 2.16.840.1.113883.6.96) (CONF:18221).-->
+											<code code="364699009" codeSystem="2.16.840.1.113883.6.96"/>
+											<statusCode code="completed"/>
+											<!-- 6.	SHALL contain exactly one [1..1] value with @xsi:type="CD", where the @code SHALL be selected from ValueSet EthnicityGroup 2.16.840.1.114222.4.11.837 DYNAMIC (CONF:18222).-->
+											<value xsi:type="CD" code="2186-5" codeSystem="2.16.840.1.113883.6.238"/>
+											<!-- Aggregate Count -->
+											<entryRelationship typeCode="SUBJ" inversionInd="true">
+												<observation classCode="OBS" moodCode="EVN">
+													<templateId root="2.16.840.1.113883.10.20.27.3.3"/>
+													<code code="MSRAGG" displayName="rate aggregation" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+													<value xsi:type="INT" value="6"/>
+													<methodCode code="COUNT" displayName="Count" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod"/>
+												</observation>
+											</entryRelationship>
+										</observation>
+									</entryRelationship>
+									<!--      RACE Supplemental Data Reporting -->
+									<!--  Similar to the Sex Data Reporting, differences inline-->
+									<entryRelationship typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<!-- 3.	SHALL contain exactly one [1..1] templateId (CONF:18225).
+
+											a.	This templateId SHALL contain exactly one [1..1] @root="2.16.840.1.113883.10.20.27.3.8" (CONF:18226).-->
+											<templateId root="2.16.840.1.113883.10.20.27.3.8"/>
+											<!-- 4.	SHALL contain exactly one [1..1] code (CONF:18227).
+
+											a.	This code SHALL contain exactly one [1..1] @code="103579009" Race (CodeSystem: SNOMED-CT 2.16.840.1.113883.6.96) (CONF:18228).-->
+											<code code="103579009" codeSystem="2.16.840.1.113883.6.96"/>
+											<statusCode code="completed"/>
+											<!-- 6.	SHALL contain exactly one [1..1] value with @xsi:type="CD", where the @code SHALL be selected from ValueSet NHSNRaceCategory 2.16.840.1.114222.4.11.836 DYNAMIC (CONF:18229).-->
+											<value xsi:type="CD" code="1002-5" codeSystem="2.16.840.1.113883.6.238"/>
+											<!-- Aggregate Count -->
+											<entryRelationship typeCode="SUBJ" inversionInd="true">
+												<observation classCode="OBS" moodCode="EVN">
+													<templateId root="2.16.840.1.113883.10.20.27.3.3"/>
+													<code code="MSRAGG" displayName="rate aggregation" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+													<value xsi:type="INT" value="4"/>
+													<methodCode code="COUNT" displayName="Count" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod"/>
+												</observation>
+											</entryRelationship>
+										</observation>
+									</entryRelationship>
+									<!--      RACE Supplemental Data Reporting -->
+									<entryRelationship typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="2.16.840.1.113883.10.20.27.3.8"/>
+											<code code="103579009" codeSystem="2.16.840.1.113883.6.96"/>
+											<statusCode code="completed"/>
+											<value xsi:type="CD" code="2028-9" codeSystem="2.16.840.1.113883.6.238"/>
+											<!-- Aggregate Count -->
+											<entryRelationship typeCode="SUBJ" inversionInd="true">
+												<observation classCode="OBS" moodCode="EVN">
+													<templateId root="2.16.840.1.113883.10.20.27.3.3"/>
+													<code code="MSRAGG" displayName="rate aggregation" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+													<value xsi:type="INT" value="2"/>
+													<methodCode code="COUNT" displayName="Count" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod"/>
+												</observation>
+											</entryRelationship>
+										</observation>
+									</entryRelationship>
+									<!--   PAYER Supplemental Data Reporting   -->
+									<!--  Similar to the Sex Data Reporting, differences inline-->
+									<entryRelationship typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<!-- 4.	SHALL contain exactly one [1..1] templateId (CONF:18237) such that it
+
+											a.	SHALL contain exactly one [1..1] @root="2.16.840.1.113883.10.20.27.3.9" (CONF:18238).-->
+											<templateId root="2.16.840.1.113883.10.20.27.3.9"/>
+											<templateId root="2.16.840.1.113883.10.20.24.3.55"/>
+											<!-- 5.6	Patient Characteristic Payer - 4.	SHALL contain at least one [1..*] id (CONF:12564).-->
+											<id nullFlavor="NA"/>
+											<code code="48768-6" codeSystem="2.16.840.1.113883.6.1"/>
+											<statusCode code="completed"/>
+											<effectiveTime nullFlavor="NA">
+												<low nullFlavor="NA"/>
+											</effectiveTime>
+											<!-- 6.	SHALL contain exactly one [1..1] value with @xsi:type="CD", where the @code SHALL be selected from ValueSet Source of Payment Typology (PHDSC) 2.16.840.1.114222.4.11.3591 DYNAMIC (CONF:18250).-->
+											<value xsi:type="CD" code="349" codeSystem="2.16.840.1.113883.3.221.5"/>
+											<!-- Aggregate Count -->
+											<entryRelationship typeCode="SUBJ" inversionInd="true">
+												<observation classCode="OBS" moodCode="EVN">
+													<templateId root="2.16.840.1.113883.10.20.27.3.3"/>
+													<code code="MSRAGG" displayName="rate aggregation" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+													<value xsi:type="INT" value="6"/>
+													<methodCode code="COUNT" displayName="Count" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod"/>
+												</observation>
+											</entryRelationship>
+										</observation>
+									</entryRelationship>
+									<!-- 15.	SHALL contain exactly one [1..1] reference (CONF:18239) such that it-->
+									<reference typeCode="REFR">
+										<!-- a.	SHALL contain exactly one [1..1] externalObservation (CONF:18240).-->
+										<externalObservation classCode="OBS" moodCode="EVN">
+											<!-- i.	This externalObservation SHALL contain exactly one [1..1] id (CONF:18241). -->
+											<!-- 1.	If this reference is to an eMeasure, this id SHALL equal the id defined in the corresponding eMeasure population criteria section (CONF:18258).-->
+											<id root="4C2E6F8A-C346-4743-8C87-63B1E0821EAF"/>
+										</externalObservation>
+									</reference>
+								</observation>
+							</component>
+							<!-- 
+
+****************************************
+
+Measure Population with Observatoin Value
+
+****************************************
+
+-->
+							<component>
+								<observation classCode="OBS" moodCode="EVN">
+									<!-- Measure Data template -->
+									<templateId root="2.16.840.1.113883.10.20.27.3.5"/>
+									<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" displayName="Assertion" codeSystemName="ActCode"/>
+									<statusCode code="completed"/>
+									<value xsi:type="CD" code="MSRPOPL" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="ObservationValue"/>
+									<!-- Aggregate Count -->
+									<entryRelationship typeCode="SUBJ" inversionInd="true">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="2.16.840.1.113883.10.20.27.3.3"/>
+											<code code="MSRAGG" displayName="rate aggregation" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+											<value xsi:type="INT" value="6"/>
+											<methodCode code="COUNT" displayName="Count" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod"/>
+										</observation>
+									</entryRelationship>
+									<!-- Reporting Stratum -->
+									<entryRelationship typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="2.16.840.1.113883.10.20.27.3.4"/>
+											<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" displayName="Assertion" codeSystemName="ActCode"/>
+											<statusCode code="completed"/>
+											<value xsi:type="CD" nullFlavor="OTH">
+												<originalText>RS1: With ED Encounter</originalText>
+											</value>
+											<!-- Aggregate Count -->
+											<entryRelationship typeCode="SUBJ" inversionInd="true">
+												<observation classCode="OBS" moodCode="EVN">
+													<templateId root="2.16.840.1.113883.10.20.27.3.3"/>
+													<code code="MSRAGG" displayName="rate aggregation" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+													<value xsi:type="INT" value="6"/>
+													<methodCode code="COUNT" displayName="Count" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod"/>
+												</observation>
+											</entryRelationship>
+											<!-- 14.	MAY contain zero or more [0..*] entryRelationship (CONF:18143) such that it 
+
+												a.	SHALL contain exactly one [1..1] @typeCode="COMP" (CodeSystem: HL7ActRelationshipType 2.16.840.1.113883.5.1002 STATIC) (CONF:18148).
+
+												b.	SHALL contain exactly one [1..1] Continuous Variable Measure Value (templateId:2.16.840.1.113883.10.20.27.3.2) (CONF:18153).
+
+												5.2	Continuous Variable Measure Value -->
+											<entryRelationship typeCode="COMP">
+												<!-- 1.	SHALL contain exactly one [1..1] @classCode="OBS" (CodeSystem: HL7ActClass 2.16.840.1.113883.5.6 STATIC) (CONF:17569). -->
+												<!-- 2.	SHALL contain exactly one [1..1] @moodCode="EVN" (CodeSystem: ActMood 2.16.840.1.113883.5.1001 STATIC) (CONF:17570). -->
+												<observation classCode="OBS" moodCode="EVN">
+													<!-- 3.	SHALL contain exactly one [1..1] templateId (CONF:18096) such that it
+
+														a.	SHALL contain exactly one [1..1] @root="2.16.840.1.113883.10.20.27.3.2" (CONF:18097).-->
+													<templateId root="2.16.840.1.113883.10.20.27.3.2"/>
+													<!-- 4.	SHALL contain exactly one [1..1] code (CONF:17571).
+
+														a.	If this continuous variable measure references an eMeasure, this code element SHALL equal the code element in that eMeasure's measure observation definition (CONF:18256).-->
+													<code nullFlavor="OTH">
+														<originalText>Time Difference</originalText>
+													</code>
+													<!-- 5.	SHALL contain exactly one [1..1] value (CONF:17572). -->
+													<value xsi:type="PQ" value="240.0" unit="min"/>
+													<!-- 6.	SHALL contain exactly one [1..1] methodCode, which SHALL be selected from ValueSet ObservationMethodAggregate 2.16.840.1.113883.1.11.20450 STATIC (CONF:18242).-->
+													<methodCode code="MEDIAN" displayName="Median" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod"/>
+													<!-- 7.	SHALL contain exactly one [1..1] reference (CONF:18243). -->
+													<reference typeCode="REFR">
+														<!-- a.	This reference SHALL contain exactly one [1..1] externalObservation (CONF:18244).-->
+														<externalObservation classCode="OBS" moodCode="EVN">
+															<!-- i.	This externalObservation SHALL contain exactly one [1..1] id (CONF:18245).-->
+															<id root="D3BF8D52-9D5F-4724-B258-ADC20B2A2D8A"/>
+														</externalObservation>
+													</reference>
+												</observation>
+											</entryRelationship>
+											<reference typeCode="REFR">
+												<externalObservation classCode="OBS" moodCode="EVN">
+													<id root="40280381-3D27-5493-013D-61074FD32A72"/>
+												</externalObservation>
+											</reference>
+										</observation>
+									</entryRelationship>
+									<!-- Reporting Stratum -->
+									<entryRelationship typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="2.16.840.1.113883.10.20.27.3.4"/>
+											<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" displayName="Assertion" codeSystemName="ActCode"/>
+											<statusCode code="completed"/>
+											<value xsi:type="CD" nullFlavor="OTH">
+												<originalText>RS2: With Mental Disorders</originalText>
+											</value>
+											<!-- Aggregate Count -->
+											<entryRelationship typeCode="SUBJ" inversionInd="true">
+												<observation classCode="OBS" moodCode="EVN">
+													<templateId root="2.16.840.1.113883.10.20.27.3.3"/>
+													<code code="MSRAGG" displayName="rate aggregation" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+													<value xsi:type="INT" value="0"/>
+													<methodCode code="COUNT" displayName="Count" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod"/>
+												</observation>
+											</entryRelationship>
+											<!-- Continuous Variable Measure Value -->
+											<entryRelationship typeCode="COMP">
+												<observation classCode="OBS" moodCode="EVN">
+													<templateId root="2.16.840.1.113883.10.20.27.3.2"/>
+													<code nullFlavor="OTH">
+														<originalText>Time Difference</originalText>
+													</code>
+													<value xsi:type="PQ" value="0" unit="min"/>
+													<methodCode code="MEDIAN" displayName="Median" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod"/>
+													<reference typeCode="REFR">
+														<externalObservation classCode="OBS" moodCode="EVN">
+															<id root="D3BF8D52-9D5F-4724-B258-ADC20B2A2D8A"/>
+														</externalObservation>
+													</reference>
+												</observation>
+											</entryRelationship>
+											<reference typeCode="REFR">
+												<externalObservation classCode="OBS" moodCode="EVN">
+													<id root="40280381-3D27-5493-013D-610750CB2A74"/>
+												</externalObservation>
+											</reference>
+										</observation>
+									</entryRelationship>
+									<!-- Reporting Stratum -->
+									<entryRelationship typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="2.16.840.1.113883.10.20.27.3.4"/>
+											<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" displayName="Assertion" codeSystemName="ActCode"/>
+											<statusCode code="completed"/>
+											<value xsi:type="CD" nullFlavor="OTH">
+												<originalText>RS3: With Acute care hospital transfer</originalText>
+											</value>
+											<!-- Aggregate Count -->
+											<entryRelationship typeCode="SUBJ" inversionInd="true">
+												<observation classCode="OBS" moodCode="EVN">
+													<templateId root="2.16.840.1.113883.10.20.27.3.3"/>
+													<code code="MSRAGG" displayName="rate aggregation" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+													<value xsi:type="INT" value="0"/>
+													<methodCode code="COUNT" displayName="Count" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod"/>
+												</observation>
+											</entryRelationship>
+											<!-- Continuous Variable Measure Value -->
+											<entryRelationship typeCode="COMP">
+												<observation classCode="OBS" moodCode="EVN">
+													<templateId root="2.16.840.1.113883.10.20.27.3.2"/>
+													<code nullFlavor="OTH">
+														<originalText>Time Difference</originalText>
+													</code>
+													<value xsi:type="PQ" value="0" unit="min"/>
+													<methodCode code="MEDIAN" displayName="Median" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod"/>
+													<reference typeCode="REFR">
+														<externalObservation classCode="OBS" moodCode="EVN">
+															<id root="D3BF8D52-9D5F-4724-B258-ADC20B2A2D8A"/>
+														</externalObservation>
+													</reference>
+												</observation>
+											</entryRelationship>
+											<reference typeCode="REFR">
+												<externalObservation classCode="OBS" moodCode="EVN">
+													<id root="40280381-3D27-5493-013D-610751872A76"/>
+												</externalObservation>
+											</reference>
+										</observation>
+									</entryRelationship>
+									<!-- Reporting Stratum -->
+									<entryRelationship typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="2.16.840.1.113883.10.20.27.3.4"/>
+											<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" displayName="Assertion" codeSystemName="ActCode"/>
+											<statusCode code="completed"/>
+											<value xsi:type="CD" nullFlavor="OTH">
+												<originalText>RS4: Without Mental Disorders and Acute care hospital transfer</originalText>
+											</value>
+											<!-- Aggregate Count -->
+											<entryRelationship typeCode="SUBJ" inversionInd="true">
+												<observation classCode="OBS" moodCode="EVN">
+													<templateId root="2.16.840.1.113883.10.20.27.3.3"/>
+													<code code="MSRAGG" displayName="rate aggregation" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+													<value xsi:type="INT" value="6"/>
+													<methodCode code="COUNT" displayName="Count" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod"/>
+												</observation>
+											</entryRelationship>
+											<!-- Continuous Variable Measure Value -->
+											<entryRelationship typeCode="COMP">
+												<observation classCode="OBS" moodCode="EVN">
+													<templateId root="2.16.840.1.113883.10.20.27.3.2"/>
+													<code nullFlavor="OTH">
+														<originalText>Time Difference</originalText>
+													</code>
+													<value xsi:type="PQ" value="240.0" unit="min"/>
+													<methodCode code="MEDIAN" displayName="Median" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod"/>
+													<reference typeCode="REFR">
+														<externalObservation classCode="OBS" moodCode="EVN">
+															<id root="D3BF8D52-9D5F-4724-B258-ADC20B2A2D8A"/>
+														</externalObservation>
+													</reference>
+												</observation>
+											</entryRelationship>
+											<reference typeCode="REFR">
+												<externalObservation classCode="OBS" moodCode="EVN">
+													<id root="40280381-3D27-5493-013D-6107531C2A79"/>
+												</externalObservation>
+											</reference>
+										</observation>
+									</entryRelationship>
+									<!--    SEX Supplemental Data Reporting -->
+									<entryRelationship typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="2.16.840.1.113883.10.20.27.3.6"/>
+											<id nullFlavor="NA"/>
+											<code code="184100006" codeSystem="2.16.840.1.113883.6.96"/>
+											<statusCode code="completed"/>
+											<value xsi:type="CD" code="M" codeSystem="2.16.840.1.113883.5.1"/>
+											<entryRelationship typeCode="SUBJ" inversionInd="true">
+												<!-- Aggregate Count template -->
+												<observation classCode="OBS" moodCode="EVN">
+													<templateId root="2.16.840.1.113883.10.20.27.3.3"/>
+													<code code="MSRAGG" displayName="rate aggregation" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+													<value xsi:type="INT" value="6"/>
+													<methodCode code="COUNT" displayName="Count" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod"/>
+												</observation>
+											</entryRelationship>
+										</observation>
+									</entryRelationship>
+									<!--     ETHNICITY Supplemental Data Reporting  -->
+									<entryRelationship typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="2.16.840.1.113883.10.20.27.3.7"/>
+											<id nullFlavor="NA"/>
+											<code code="364699009" codeSystem="2.16.840.1.113883.6.96"/>
+											<statusCode code="completed"/>
+											<value xsi:type="CD" code="2186-5" codeSystem="2.16.840.1.113883.6.238"/>
+											<entryRelationship typeCode="SUBJ" inversionInd="true">
+												<!-- Aggregate Count template -->
+												<observation classCode="OBS" moodCode="EVN">
+													<templateId root="2.16.840.1.113883.10.20.27.3.3"/>
+													<code code="MSRAGG" displayName="rate aggregation" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+													<value xsi:type="INT" value="6"/>
+													<methodCode code="COUNT" displayName="Count" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod"/>
+												</observation>
+											</entryRelationship>
+										</observation>
+									</entryRelationship>
+									<!--      RACE Supplemental Data Reporting  -->
+									<entryRelationship typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="2.16.840.1.113883.10.20.27.3.8"/>
+											<id nullFlavor="NA"/>
+											<code code="103579009" codeSystem="2.16.840.1.113883.6.96"/>
+											<statusCode code="completed"/>
+											<value xsi:type="CD" code="1002-5" codeSystem="2.16.840.1.113883.6.238"/>
+											<entryRelationship typeCode="SUBJ" inversionInd="true">
+												<!-- Aggregate Count template -->
+												<observation classCode="OBS" moodCode="EVN">
+													<templateId root="2.16.840.1.113883.10.20.27.3.3"/>
+													<code code="MSRAGG" displayName="rate aggregation" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+													<value xsi:type="INT" value="4"/>
+													<methodCode code="COUNT" displayName="Count" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod"/>
+												</observation>
+											</entryRelationship>
+										</observation>
+									</entryRelationship>
+									<!--      RACE Supplemental Data Reporting  -->
+									<entryRelationship typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="2.16.840.1.113883.10.20.27.3.8"/>
+											<id nullFlavor="NA"/>
+											<code code="103579009" codeSystem="2.16.840.1.113883.6.96"/>
+											<statusCode code="completed"/>
+											<value xsi:type="CD" code="2028-9" codeSystem="2.16.840.1.113883.6.238"/>
+											<entryRelationship typeCode="SUBJ" inversionInd="true">
+												<!-- Aggregate Count template -->
+												<observation classCode="OBS" moodCode="EVN">
+													<templateId root="2.16.840.1.113883.10.20.27.3.3"/>
+													<code code="MSRAGG" displayName="rate aggregation" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+													<value xsi:type="INT" value="2"/>
+													<methodCode code="COUNT" displayName="Count" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod"/>
+												</observation>
+											</entryRelationship>
+										</observation>
+									</entryRelationship>
+									<!--         PAYER Supplemental Data Reporting  -->
+									<entryRelationship typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="2.16.840.1.113883.10.20.27.3.9"/>
+											<templateId root="2.16.840.1.113883.10.20.24.3.55"/>
+											<id nullFlavor="NA"/>
+											<code code="48768-6" codeSystem="2.16.840.1.113883.6.1"/>
+											<statusCode code="completed"/>
+											<effectiveTime nullFlavor="NA">
+												<low nullFlavor="NA"/>
+											</effectiveTime>
+											<value xsi:type="CD" code="349" codeSystem="2.16.840.1.113883.3.221.5"/>
+											<entryRelationship typeCode="SUBJ" inversionInd="true">
+												<!-- Aggregate Count template -->
+												<observation classCode="OBS" moodCode="EVN">
+													<templateId root="2.16.840.1.113883.10.20.27.3.3"/>
+													<code code="MSRAGG" displayName="rate aggregation" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+													<value xsi:type="INT" value="6"/>
+													<methodCode code="COUNT" displayName="Count" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod"/>
+												</observation>
+											</entryRelationship>
+										</observation>
+									</entryRelationship>
+									<entryRelationship typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="2.16.840.1.113883.10.20.27.3.2"/>
+											<code nullFlavor="OTH">
+												<originalText>Time Difference</originalText>
+											</code>
+											<statusCode code="completed"/>
+											<value xsi:type="PQ" value="240.0" unit="min"/>
+											<methodCode code="MEDIAN" displayName="Median" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod"/>
+											<reference typeCode="REFR">
+												<externalObservation classCode="OBS" moodCode="EVN">
+													<id root="D3BF8D52-9D5F-4724-B258-ADC20B2A2D8A"/>
+												</externalObservation>
+											</reference>
+										</observation>
+									</entryRelationship>
+									<!-- If observation/value/@code="MSRPOPL" then the following entryRelationship SHALL be present. -->
+									<!-- 14.	MAY contain zero or more [0..*] entryRelationship (CONF:18143) such that it 
+
+										a.	SHALL contain exactly one [1..1] @typeCode="COMP" (CodeSystem: HL7ActRelationshipType 2.16.840.1.113883.5.1002 STATIC) (CONF:18148).
+
+										b.	SHALL contain exactly one [1..1] Continuous Variable Measure Value (templateId:2.16.840.1.113883.10.20.27.3.2) (CONF:18153).-->
+									<!-- Continuous Variable Measure Value -->
+									<entryRelationship typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="2.16.840.1.113883.10.20.27.3.2"/>
+											<code nullFlavor="OTH">
+												<originalText>Time Difference</originalText>
+											</code>
+											<statusCode code="completed"/>
+											<value xsi:type="PQ" value="240.0" unit="min"/>
+											<methodCode code="MEDIAN" displayName="Median" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod"/>
+											<reference typeCode="REFR">
+												<externalObservation classCode="OBS" moodCode="EVN">
+													<id root="D3BF8D52-9D5F-4724-B258-ADC20B2A2D8A"/>
+												</externalObservation>
+											</reference>
+										</observation>
+									</entryRelationship>
+									<reference typeCode="REFR">
+										<externalObservation classCode="OBS" moodCode="EVN">
+											<id root="101C2A01-2B54-4AA3-A41D-4DAC6B6EF9AA"/>
+										</externalObservation>
+									</reference>
+								</observation>
+							</component>
+						</organizer>
+					</entry>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>
